@@ -8,9 +8,9 @@ module "snowflake_role_grants" {
   privileges          = var.privileges
   file_format         = var.file_format_name
   database_resource   = 1
-  schema_resource     = 1
+  schema_resource     = 0
   table_resource      = 0
-  warehouse_resource  = 1
-  stage_resource      = 1
-  fileformat_resource = 1
+  warehouse_resource  = 0
+  stage_resource      = 0
+  fileformat_resource = 0
 }
