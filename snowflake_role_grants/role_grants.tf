@@ -9,7 +9,7 @@ resource snowflake_database_grant grant_database {
 resource snowflake_schema_grant grant_schema {
   count             = var.schema_resource
   database_name     = var.database_name
-  schema_name       = var.product
+  schema_name       = var.schema_name
   privilege         = var.privileges
   roles             = [var.role_name]
   with_grant_option = false
@@ -18,7 +18,7 @@ resource snowflake_schema_grant grant_schema {
 resource snowflake_table_grant grant_table {
   count             = var.table_resource
   database_name     = var.database_name
-  schema_name       = var.product
+  schema_name       = var.schema_name
   privilege         = var.privileges
   roles             = [var.role_name]
   on_future         = false
@@ -37,7 +37,7 @@ resource snowflake_warehouse_grant warehouse_grant {
 resource snowflake_stage_grant stage_grant {
   count             = var.stage_resource
   database_name     = var.database_name
-  schema_name       = var.product
+  schema_name       = var.schema_name
   stage_name        = var.stage_name
   privilege         = var.privileges
   roles             = [var.role_name]
@@ -47,7 +47,7 @@ resource snowflake_stage_grant stage_grant {
 resource snowflake_file_format_grant file_format_grant {
   count             = var.fileformat_resource
   database_name     = var.database_name
-  schema_name       = var.product
+  schema_name       = var.schema_name
   file_format_name  = var.file_format
   privilege         = var.privileges
   roles             = [var.role_name]

@@ -75,3 +75,9 @@ variable "fileformat_resource" {
   type        = string
   description = "resource to exist"
 }
+
+variable "table_resource" {
+  default     = 0
+  type        = string
+  description = "resource to exist"
+}

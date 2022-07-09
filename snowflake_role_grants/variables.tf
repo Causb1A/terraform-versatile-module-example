@@ -16,10 +16,10 @@ variable "stage_name" {
   description = "Snowflake stage name for grants, not required for some grants"
 }
 
-variable "product" {
+variable "schema_name" {
   default     = "NA"
   type        = string
-  description = "Snowflake product/schema name for grants, not required for some grants"
+  description = "Snowflake schema name for grants, not required for some grants"
 }
 
 variable "role_name" {
